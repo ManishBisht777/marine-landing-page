@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="overlay">
+      <h1>SEA</h1>
+      <span>MARINE LIFE</span>
+    </div>
+
+    <div class="wrapper">
+      <div class="nav">
+        <div class="menu-links">
+          <ul>
+            <li>home.</li>
+            <li>Sea life.</li>
+            <li>contact.</li>
+          </ul>
+        </div>
+
+        <div class="style">
+          <div class="dot">01</div>
+          <div class="bar"></div>
+          <div class="dot">03</div>
+          <div class="dot">04</div>
+        </div>
+
+        <div class="logo">
+          <h1>About Turtle</h1>
+          <p>
+            Turtles are an order of reptiles known as Testudines, characterized
+            by a shell developed mainly from their ribs. Modern turtles are
+            divided into two major groups, the side-necked turtles and hidden
+            neck turtles, which differ in the way the head retracts.
+          </p>
+        </div>
+      </div>
+
+      <div class="fishbox">
+        <p>Green Sea</p>
+        <h1>
+          <span id="T">T</span>
+          <span id="U">U</span>
+          <span id="R">R</span>
+          <span id="T2">T</span>
+          <span id="L">L</span>
+          <span id="E">E</span>
+        </h1>
+        <div class="circle1"></div>
+        <div class="circle2"></div>
+        <div class="circle3"></div>
+      </div>
+    </div>
+
+    <div class="watchnow">
+      <ion-icon name="play-outline"></ion-icon>
+      <a href="#">Explore now!</a>
+    </div>
+
+    <div class="media">
+      <ul>
+        <li><i class="fa fa-facebook"></i></li>
+        <li><i class="fa fa-twitter"></i></li>
+        <li><i class="fa fa-instagram"></i></li>
+      </ul>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
+    <script>
+      // laoding
+      gsap.to(".overlay h1", 2, {
+        opacity: 0,
+        y: -60,
+        ease: Expo.easeInOut,
+      });
+
+      gsap.to(".overlay span", 2, {
+        delay: 0.3,
+        opacity: 0,
+        y: -60,
+        ease: Expo.easeInOut,
+      });
+
+      gsap.to(".overlay", 2, {
+        delay: 1,
+        top: "-100%",
+        ease: Expo.easeInOut,
+      });
+
+      //loading end
+
+      // fish box
+
+      gsap.from("#T", {
+        delay: 2,
+        opacity: 0,
+        x: -150,
+        duration: 0.5,
+      });
+      gsap.from("#U", {
+        delay: 2.1,
+        opacity: 0,
+        y: -150,
+        duration: 0.5,
+      });
+      gsap.from("#R", {
+        delay: 2.2,
+        opacity: 0,
+        y: 150,
+        duration: 0.5,
+      });
+      gsap.from("#T2", {
+        delay: 2.3,
+        opacity: 0,
+        y: -150,
+        duration: 0.5,
+      });
+      gsap.from("#L", {
+        delay: 2.4,
+        opacity: 0,
+        y: 150,
+        duration: 0.5,
+      });
+      gsap.from("#E", {
+        delay: 2.6,
+        opacity: 0,
+        x: 150,
+        duration: 0.5,
+      });
+
+      gsap.from(".circle1", {
+        delay: 2.8,
+        scale: 0,
+      });
+
+      gsap
+        .timeline({ repeat: -1, repeatDelay: 0 })
+        .to(".circle1", {
+          x: 10,
+          y: 10,
+          duration: 2,
+        })
+        .to(".circle1", {
+          x: 10,
+          y: -10,
+          duration: 2,
+        })
+        .to(".circle1", {
+          x: 0,
+          y: 0,
+          duration: 2,
+        });
+
+      gsap.from(".circle2", {
+        delay: 2.9,
+        scale: 0,
+      });
+
+      gsap
+        .timeline({ repeat: -1, repeatDelay: 0 })
+        .to(".circle2", {
+          x: 10,
+          y: -10,
+          duration: 2,
+        })
+        .to(".circle2", {
+          x: -10,
+          y: 10,
+          duration: 2,
+        })
+        .to(".circle2", {
+          x: 0,
+          y: 0,
+          duration: 2,
+        });
+      gsap.from(".circle3", {
+        delay: 3,
+        scale: 0,
+      });
+
+      gsap
+        .timeline({ repeat: -1, repeatDelay: 0 })
+        .to(".circle3", {
+          x: -10,
+          y: 10,
+          duration: 2,
+        })
+        .to(".circle3", {
+          x: 20,
+          y: -10,
+          duration: 2,
+        })
+        .to(".circle3", {
+          x: -10,
+          y: -10,
+          duration: 2,
+        })
+        .to(".circle3", {
+          x: 0,
+          y: 0,
+          duration: 2,
+        });
+
+      //fish box
+
+      gsap.from(".logo", 1, {
+        delay: 3,
+        opacity: 0,
+        y: -100,
+        ease: Expo.easeInOut,
+      });
+
+      gsap.from(".style div", 1, {
+        delay: 3.2,
+        opacity: 0,
+        x: -100,
+        ease: Expo.easeInOut,
+        stagger: 0.3,
+      });
+
+      gsap.from(".menu-links ul li", 1, {
+        delay: 3.4,
+        opacity: 0,
+        x: -100,
+        ease: Expo.easeInOut,
+        stagger: 0.3,
+      });
+
+      gsap.from(".watchnow", 1, {
+        delay: 3.5,
+        opacity: 0,
+        x: 200,
+        ease: Expo.easeInOut,
+      });
+
+      gsap.from(
+        ".media ul li",
+        1,
+        {
+          delay: 3,
+          opacity: 0,
+          y: 100,
+          ease: Expo.easeInOut,
+          stagger: 0.3,
+        },
+        0.08
+      );
+    </script>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
